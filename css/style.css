@@ -1,0 +1,68 @@
+:root {
+  --direction: ltr;
+  --text-combine-upright: none;
+  --writing-mode: horizontal-tb;
+  --text-orientation: mixed;
+}
+
+.direction {
+  direction: var(--direction);
+}
+
+.text-combine-upright {
+  text-combine-upright: var(--text-combine-upright);
+}
+
+.writing-mode {
+  writing-mode: var(--writing-mode);
+}
+
+.text-orientation {
+  text-orientation: var(--text-orientation);
+  writing-mode: vertical-rl;
+}
+
+.writing-mode div {
+  width: 50px;
+}
+
+.section-header {
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-container > * {
+  border: solid;
+  padding: 0.5rem;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-column-reverse {
+  flex-direction: column-reverse;
+}
+
+.writing-mode-lr {
+  writing-mode: vertical-lr;
+}
+
+label {
+  font-weight: bold;
+}
+
+.shorten-verbose {
+  max-width: 500px;
+}

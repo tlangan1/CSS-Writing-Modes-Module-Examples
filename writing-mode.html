@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+    <h1 class="section-header">CSS Writing Modes</h1>
+    <label for="direction">Direction: </label>
+    <select id="direction">
+      <option value="ltr">Left to Right (Default)</option>
+      <option value="rtl">Right to Left</option>
+    </select>
+    <div class="flex-container flex-row direction">
+      <div>Number 1 in the flow</div>
+      <div>Number 2 in the flow</div>
+      <div>Number 3 in the flow</div>
+    </div>
+    <div class="flex-container flex-row">
+      <div>
+        <label for="text-combine-upright">Text Combine Upright: </label>
+        <select id="text-combine-upright">
+          <option value="none">none (Default)</option>
+          <option value="all">all</option>
+        </select>
+        <div class="shorten-verbose">
+          This property only has an effect in vertical writing modes so I hard
+          coded these examples to "writing-mode: vertical-lr".
+        </div>
+        <div class="flex-container flex-row writing-mode-lr">
+          <p class="text-combine-upright">This is a paragraph.</p>
+          <p class="text-combine-upright">12345</p>
+          <p lang="ja">
+            平成<span class="text-combine-upright">20</span>年<span
+              class="text-combine-upright"
+              >4</span
+            >月<span class="text-combine-upright">16</span>日に
+          </p>
+        </div>
+      </div>
+      <div>
+        <label for="writing-mode">Writing Mode: </label>
+        <select id="writing-mode">
+          <option value="horizontal-tb">horizontal-tb (Default)</option>
+          <option value="vertical-lr">vertical-lr</option>
+          <option value="vertical-rl">vertical-rl</option>
+        </select>
+        <div class="flex-container flex-row writing-mode">
+          <div>Item 1</div>
+          <div>Item 2</div>
+          <div>Item 3</div>
+          <div>Item 4</div>
+        </div>
+      </div>
+      <div>
+        <label for="text-orientation">Text Orientation: </label>
+        <select id="text-orientation">
+          <option value="mixed">mixed (Default)</option>
+          <option value="upright">upright</option>
+          <option value="sideways-right">sideways-right</option>
+          <option value="sideways">sideways</option>
+          <option value="use-glyph-orientation">use-glyph-orientation</option>
+        </select>
+        <div class="shorten-verbose">
+          This property only has an effect in vertical writing modes so I hard
+          coded these examples to "writing-mode: vertical-lr".
+        </div>
+        <p class="text-orientation">This is a paragraph.</p>
+      </div>
+    </div>
+  </body>
+</html>
